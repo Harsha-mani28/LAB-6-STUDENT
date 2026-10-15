@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Student Result Management System</h1>
+        <p>Enter marks and calculate student results</p>
+    </header>
+
+    <main>
+        <section class="form-box">
+            <h2>Add Student Result</h2>
+
+            <form id="resultForm">
+                <label for="roll">Roll Number</label>
+                <input type="text" id="roll" required>
+
+                <label for="name">Student Name</label>
+                <input type="text" id="name" required>
+
+                <label for="subject1">Subject 1 Marks</label>
+                <input type="number" id="subject1" min="0" max="100" required>
+
+                <label for="subject2">Subject 2 Marks</label>
+                <input type="number" id="subject2" min="0" max="100" required>
+
+                <label for="subject3">Subject 3 Marks</label>
+                <input type="number" id="subject3" min="0" max="100" required>
+
+                <button type="submit">Add Result</button>
+            </form>
+            <p id="message"></p>
+        </section>
+
+        <section class="results">
+            <h2>Student Results</h2>
+            <input type="text" id="search" placeholder="Search by name or roll number">
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Name</th>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>Result</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultTable"></tbody>
+                </table>
+            </div>
+            <p id="emptyMessage">No student results added yet.</p>
+        </section>
+    </main>
+
+    <footer>Student Result Management System | Lab 6</footer>
+</body>
+</html>
